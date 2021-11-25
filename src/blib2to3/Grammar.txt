@@ -135,8 +135,8 @@ namedexpr_test: asexpr_test [':=' asexpr_test]
 # This is actually not a real rule, though since the parser is very
 # limited in terms of the strategy about match/case rules, we are inserting
 # a virtual case (<expr> as <expr>) as a valid expression. Unless a better
-# approach is thought, the only side effect of this seem to be just allowing
-# more stuff to be parser (which would fail on the ast).
+# approach is thought, the only side effect of this seems to be just allowing
+# more stuff to be parsed (which would fail on the ast).
 asexpr_test: test ['as' test]
 
 test: or_test ['if' or_test 'else' test] | lambdef
